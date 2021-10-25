@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>Pet Store</title>
+</head>
+<body>
+    <div id="intro">
+        <p>
+            Use the forms below to get, post, or update from petstore3.swagger.io.<br>
+            The status will be displayed below.<br>
+            Either the complete pet-table will be displayed, or a specific pet, depending on what you did.
+        </p>
+        <a href="/">Back to main-page.</a>
+    </div>
+    <div id="top">
+        <form method="get"  id="form_get">
+            <label for="pet_id">Pet ID:</label>
+            <br>
+            <input type="number" id="pet_id" name="pet_id"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <br>
+            <input type="submit" value="GET">
+        </form>
+        <form method="post" action="static/js/index.js" id="form_post">
+            <label for="pet_id">Pet ID:</label>
+            <br>
+            <input type="number" id="pet_id" name="pet_id"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <br>
+            <label for="pet_name">Pet Name:</label>
+            <br>
+            <input type="text" id="pet_name" name="pet_name">
+            <br>
+            <label for="pet_status">Pet Status:</label>
+            <br>
+                <input type="radio" id="status_available" name="pet_status" value="available">
+                <label for="status_available">available</label><br>
+                <input type="radio" id="status_pending" name="pet_status" value="pending">
+                <label for="status_pending">pending</label><br>
+                <input type="radio" id="status_sold" name="pet_status" value="sold">
+                <label for="status_sold">sold</label>
+            <br>
+            <input type="submit" value="POST">
+        </form>
+        <form method="post" action="static/js/index.js" id="form_delete">
+            <label for="pet_id">Pet ID:</label>
+            <br>
+            <input type="number" id="pet_id" name="pet_id"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <br>
+            <input type="submit" value="DELETE">
+        </form>
+    </div>
+    <div id="app"></div>
+    
+    <script type="module" src="/static/js/index.js"></script>
+</body>
+</html>
