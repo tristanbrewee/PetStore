@@ -21,12 +21,7 @@ export default class extends AbstractsView {
     }
     
     getHtmlDependingOnRespone(output){
-        console.log(output);
-        if(output === 200){
-            return this.getHtmlForSucces(output);
-        }else{
-            return this.getHtmlForError(output);
-        }            
+        return this.getHtmlForError(output);
     }
     
     getHtmlForSucces(output){
