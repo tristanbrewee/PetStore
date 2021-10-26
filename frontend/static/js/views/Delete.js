@@ -15,12 +15,7 @@ export default class extends AbstractsView {
     
         var output = await fetch(url)
         .then(function(response) {
-            if(response.status === 200){
-                return response.status;
-            }
-            else {
-                return response.status;
-            }
+            return response.status;
         })
         return this.getHtmlDependingOnRespone(output);
     }
